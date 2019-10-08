@@ -1,7 +1,6 @@
 import React from 'react';
 import Aux from '../../HOC/Aux';
 import Menu from '../../Components/Menu/Menu';
-import logo from '../../logo.png';
 import classes from './ExperienceBuilder.css';
 import ExperienceCard from '../../Components/ExperienceCard/ExperienceCard';
 
@@ -15,7 +14,7 @@ const ExperienceBuilder =() => {
         
     return (
         <Aux>
-            <Menu links={links} logo={logo} />
+            <Menu links={links} />
             <div className={classes.flexboxContainer}>
                 <div><h2>Left Section</h2></div>
                 <ExperienceCard />

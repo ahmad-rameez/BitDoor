@@ -49,17 +49,18 @@ const Actions = styled.div`
   }
 `
 const Action = styled.button`
-  margin: 0 5px;
-  padding: 8px 14px;
-  background: rgba(155, 155, 155, 0.2);
-  color: #000;
-  cursor: pointer;
-  border: 1px solid #000;
-  outline: 0;
-  font-weight: 300;
-  :hover {
-    opacity: 0.8;
-  }
+    margin: 0 5px;
+    padding: 8px 14px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: 0;
+    font-weight: 300;
+    :hover {
+        opacity: 0.8;
+    }
 `
 const Card = ({
   title,

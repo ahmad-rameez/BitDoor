@@ -42,22 +42,36 @@ const ExperienceCard = () => {
       onClick: onViewsClick,
     },
   ]
+
+const data = {
+    exp1: {
+        id: "azxc",
+        title: "This is my Experience",
+        description: "Consuming apple with its peel.",
+    },
+    exp2: {
+        id: "sdzx",
+        title: "This is my second Experience",
+        description: "Consuming apple with its peel.",
+    }
+}
   return (
-    <StyledRoot>
-        <StyledContainer>
-        <Card
-          title="The Benefits of Green Apples"
-          date={date}
-          description="Green apples have a high fiber content which helps in increasing the
-                        body's metabolism. While consuming an apple, make sure that you're not
-                        tossing the peel in the trash. Consuming apple with its peel improves
-                        the overall health. Due to its high fiber content, apple helps in
-                        detoxification process. It keeps the liver and digestive system away
-                        from harmful elements."
-          actions={buttons}/>
-        </StyledContainer>
-    </StyledRoot>
-  )
+    <ul>
+        {Object.keys(data).map((exp) =>
+            <li key={data[exp].id}>
+                <StyledRoot>
+                <StyledContainer>
+                <Card
+                    title={data[exp].title}
+                    date={date}
+                    description={data[exp].description}
+                    actions={buttons}/>
+                </StyledContainer>
+                </StyledRoot>
+            </li>
+        )}
+    </ul>
+  );
 }
 
 export default ExperienceCard;
