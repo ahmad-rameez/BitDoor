@@ -1,11 +1,5 @@
-.column {
-    float: left;
-    width: 33.33%;
-    background-color: aqua;
-  }
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.flexboxContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

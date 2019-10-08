@@ -3,6 +3,7 @@ import Aux from '../../HOC/Aux';
 import Menu from '../../Components/Menu/Menu';
 import logo from '../../logo.png';
 import classes from './ExperienceBuilder.css';
+import ExperienceCard from '../../Components/ExperienceCard/ExperienceCard';
 
 const ExperienceBuilder =() => {
     let links = [
@@ -15,12 +16,10 @@ const ExperienceBuilder =() => {
     return (
         <Aux>
             <Menu links={links} logo={logo} />
-            <div>
-            <div className={classes.row}>
-                <div className={classes.column}>dskndksndkasndkndksandkandkndkandknsakdnkasndkandka</div>
-                <div className={classes.column}>11111111111111111111111111111111111111111</div>
-                <div className={classes.column}></div>
-            </div>
+            <div className={classes.flexboxContainer}>
+                <div><h2>Left Section</h2></div>
+                <ExperienceCard />
+                <div><h2>Right Section</h2></div>
             </div>
         </Aux>
     );

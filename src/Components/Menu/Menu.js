@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Menu.css';
+import styles from  './Menu.css';
 import searchIcon from './search-icon.png';
 
 class Menu extends Component {
@@ -19,39 +19,41 @@ class Menu extends Component {
 
     render() {
         let searchForm = this.state.showForm ? (
-            <form className="menu__search-form" method="POST">
-                <input className="menu__search-input" placeholder="Type and hit enter" />
+            <form className={styles.menu__search_form} method="POST">
+                <input className={styles.menu__search_input} placeholder="Type and hit enter" />
             </form>
         ) : '';
 
         let linksMarkup = this.props.links.map((link, index) => {
             let linkMarkup = link.active ? (
-                <a className="menu__link menu__link--active" href={link.link}>{link.label}</a>
+                <a className={[styles.menu__link + ' ' + styles.menu__link__active]} href={link.link}>{link.label}</a>
             ) : (
-                <a className="menu__link" href={link.link}>{link.label}</a>
+                <a className={styles.menu__link} href={link.link}>{link.label}</a>
             );
 
             return (
-                <li key={index} className="menu__list-item">
+                <li key={index} className={styles.menu__list_item}>
                     {linkMarkup}
                 </li>
             );
         });
 
         return (
-            <nav className="menu">
-                <h1 style={{
+            <nav className={styles.menu}>
+                {/* <h1 style={{
                 backgroundImage: 'url(' + this.props.logo + ')'
-                }} className="menu__logo">Epic Co.</h1>
+                }} className={styles.menu__logo}>Logo</h1> */}
 
-                <div className="menu__right">
-                    <ul className="menu__list">
+                <h1>Logo</h1>
+
+                <div className={styles.menu__right}>
+                    <ul className={styles.menu__list}>
                         {linksMarkup}
                     </ul>
 
                     <button onClick={this.showForm.bind(this)} style={{
                     backgroundImage: 'url(' + searchIcon + ')'
-                    }} className="menu__search-button"></button>
+                    }} className={styles.menu__search_button}></button>
 
                     {searchForm}
                 </div>
