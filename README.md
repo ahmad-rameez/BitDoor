@@ -8,6 +8,6 @@ Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
-##BitDoor
+## `BitDoor`
 
 This is a web app to share interview experiences of placements at college level!
