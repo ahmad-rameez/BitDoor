@@ -60,7 +60,7 @@
 .menu__logo {
     text-indent: -9999999px;
     display: inline-block;
-    height: 47px;
+    height: 100%;
     width: 92px;
     background-size: cover 100%;
     background-repeat: no-repeat;

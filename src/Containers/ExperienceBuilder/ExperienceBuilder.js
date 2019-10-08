@@ -11,14 +11,18 @@ const ExperienceBuilder =() => {
         { label: 'Placements', link: 'Home' },
         { label: 'Contact Us', link: 'Contact' },
       ];
+    const style1 = {
+        backgroundColor: '#fff',
+    };
+    
         
     return (
         <Aux>
             <Menu links={links} />
             <div className={classes.flexboxContainer}>
-                <div><h2>Left Section</h2></div>
-                <ExperienceCard />
-                <div><h2>Right Section</h2></div>
+                <div style={style1}><h2>Left Section</h2></div>
+                <ExperienceCard/>
+                <div style={style1}><h2>Right Section</h2></div>
             </div>
         </Aux>
     );
