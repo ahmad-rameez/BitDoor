@@ -1,0 +1,23 @@
+#content{
+    position: relative;
+    /* border: 2px solid red; */
+    height: 100vh auto;
+    margin-top: 0%;
+    padding: 0%;
+}
+#header,#footer{
+    border: 2px solid black;
+}
+#header{
+    /* position: absolute; */
+    text-align: center;
+    top:1vh;
+    font-size: 2em;
+    
+}
+#footer{
+    /* position: absolute; */
+    text-align: center;
+    bottom:1vh;
+    font-size: 2em;
+}

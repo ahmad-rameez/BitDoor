@@ -1,0 +1,9 @@
+.navEntry{
+   margin: 0%;
+   margin-top:3%;
+   width:100%;
+   text-align: center;
+}
+.navEntry:hover{
+   background:rgb(33, 223, 33);
+}

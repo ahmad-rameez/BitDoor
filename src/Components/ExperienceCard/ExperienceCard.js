@@ -15,6 +15,7 @@ const UnorderedList = styled.ul`
     padding: 0px 10px;
     margin: 0px 5px;
     width: 600px;
+    margin-top: 20px;
 `
 const ListItem = styled.li`
     list-style: none;
