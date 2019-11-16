@@ -4,6 +4,7 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import NavbarTop from './Components/Menu/NavbarTop';
 import Home from './Components/Home/Home';
 import ExperienceBuilder from './Containers/ExperienceBuilder/ExperienceBuilder'
+import Companaies from './Containers/Companies/Companies';
 
 const App = ()=> {
   return (
@@ -11,6 +12,7 @@ const App = ()=> {
         <NavbarTop />
         <Route path='/' exact component={Home} />
         <Route path='/experiences'  component={ExperienceBuilder} /> 
+        <Route path='/companies'  component={Companaies} /> 
     </BrowserRouter>
   );
 }
