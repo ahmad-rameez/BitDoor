@@ -1,7 +1,20 @@
 import React from 'react';
 import styles from './CompanyCard.css';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
+
+const useStyles = makeStyles(theme => ({
+    button: {
+      margin: theme.spacing(1),
+    },
+    input: {
+      display: 'none',
+    },
+  }));
 
 const CompanyCard = props => {
+    const classes = useStyles();
         return (
                 <div className={styles.card}>
                     <div className={styles.cardInner}>
@@ -23,7 +36,15 @@ const CompanyCard = props => {
 
                         <div className={styles.cardBack}>
                                 <div className={styles.backDesc}>
-                                    <p>{props.companyAbout}</p>
+                                    <p style={{textAlign:'center'}}>{props.companyAbout}</p>
+                                </div>
+                                <div className={styles.buttons}>
+                                    <Button variant="contained" className={classes.button}>
+                                        Alumni Info
+                                    </Button>
+                                    <Button variant="contained"  className={classes.button}>
+                                        <Link to="/experiences">Interview Experiences</Link>
+                                    </Button>
                                 </div>
                         </div>
                     </div>
